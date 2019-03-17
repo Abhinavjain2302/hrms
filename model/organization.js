@@ -1,0 +1,42 @@
+const mongoose = require("mongoose");
+const schema = mongoose.Schema({
+  organizationName:{
+    type:String,
+  },
+  superAdminId:{
+     type:String
+  },
+  taxId:{
+    type:String,
+  },
+  noOfEmployees:{
+    type:Number
+  },
+  regNo:{
+    type:String,
+  },
+  contact:{
+     type:Number,
+   },
+   address:{
+    type:String
+   },
+   locations:[{
+     name:{type:String},
+     city:{type:String},
+     country:{type:String},
+     phone:{type:Number},
+     noOfEmployees:{type:Number},
+   }],
+  structure:[{
+    unitId:{type:String},
+    name:{type:String,},
+    hou:{type:String},
+    description:{type:String}
+  }],
+  holidays:[{
+    date:{type:Date},
+    desc:{type:String}}
+  ]
+});
+module.exports = mongoose.model("Organization", schema);

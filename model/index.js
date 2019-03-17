@@ -1,6 +1,6 @@
 module.exports = {
-    Post: require("./Post"),
+    //Post: require("./Post"),
     User: require("./User"),
-    Reply: require("./Reply"),
-    Comments: require("./Comments")
+    //addorganization: require("./addorganization"),
+    organization: require("./organization")
 };

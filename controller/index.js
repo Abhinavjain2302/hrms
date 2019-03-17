@@ -1,7 +1,7 @@
 module.exports = {
-    comment: require("./comment"),
-    like: require("./like"),
-    post: require("./post"),
+   // comment: require("./comment"),
+   // like: require("./like"),
+    //post: require("./post"),
     user: require("./user"),
-    reply: require("./reply")
+    organization: require("./organization")
 };

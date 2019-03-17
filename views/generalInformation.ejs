@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin Panel</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+<style>
+  #submitbtn{
+    background:transparent;
+    transition: all 0.6s 0s linear;
+    }
+    #submitbtn:hover{
+      background: rgba(0,0,255,0.7);
+    }
+    table,td,th{
+      border:1px solid black;
+    }
+    table{
+      width:1200px;
+      margin:auto;
+    }
+</style>
+</head>
+
+<body>
+  <div class="body-wrapper">
+    <!-- partial:partials/_sidebar.html -->
+    <aside class="mdc-persistent-drawer mdc-persistent-drawer--open">
+      <nav class="mdc-persistent-drawer__drawer">
+        <div class="mdc-persistent-drawer__toolbar-spacer">
+          <a href="#" class="brand-logo" style="text-decoration-color: none">
+            ADMIN
+          </a>
+        </div>
+        <div class="mdc-list-group" style="height:100vh">
+          <nav class="mdc-list mdc-drawer-menu">
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="#" id="admin">
+                <i  class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">desktop_mac</i>
+                Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='material-icons' style="font-size:15px;">add</i>
+              </a>
+              <a class="mdc-drawer-link" href="#" id="user" style="display:none;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                User-Management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='material-icons' style="font-size:15px;">add</i>
+              </a>
+              <a class="mdc-drawer-link" href="index.html" id="users" style="display:none;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Users
+            </a>
+            <a class="mdc-drawer-link" href="#" id="userrole" style="display:none;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            User-Role
+          </a>
+              <a class="mdc-drawer-link" href="#" id="organisation" style="display:none;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Organisation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='material-icons' style="font-size:15px;">add</i>
+              </a>
+              <a class="mdc-drawer-link" href="generalinformation.html" id="generalinformation" style="display:none;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              General Information
+            </a>
+            <a class="mdc-drawer-link" href="locations.html" id="locations" style="display:none;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Locations
+          </a>
+          <a class="mdc-drawer-link" href="structure.html" id="structure" style="display:none;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Structure
+        </a>
+        <a class="mdc-drawer-link" href="#" id="leave" style="display:none;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Leave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='material-icons' style="font-size:15px;">add</i>
+        </a>
+        <a class="mdc-drawer-link" href="structure.html" id="leavelist" style="display:none;">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Leave List
+      </a>
+      <a class="mdc-drawer-link" href="structure.html" id="leavecalander" style="display:none;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Leave Calander
+    </a> 
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              
+            </div>
+            <div class="mdc-list-item mdc-drawer-item" href="#" data-toggle="expansionPanel" target-panel="ui-sub-menu">
+              <a class="mdc-drawer-link" href="#">
+                
+              </a>
+              <div class="mdc-expansion-panel" id="ui-sub-menu">
+                <nav class="mdc-list mdc-drawer-submenu">
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/ui-features/buttons.html">
+                      Buttons
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/ui-features/typography.html">
+                      Typography
+                    </a>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            
+            
+            <div class="mdc-list-item mdc-drawer-item" href="#" data-toggle="expansionPanel" target-panel="sample-page-submenu">
+              <a class="mdc-drawer-link" href="#">
+                
+              </a>
+              <div class="mdc-expansion-panel" id="sample-page-submenu">
+                <nav class="mdc-list mdc-drawer-submenu">
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/blank-page.html">
+                      Blank Page
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/403.html">
+                      403
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/404.html">
+                      404
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/500.html">
+                      500
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/505.html">
+                      505
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/login.html">
+                      Login
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="pages/samples/register.html">
+                      Register
+                    </a>
+                  </div>
+
+                </nav>
+              </div>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item purchase-link">
+              
+            </div>
+          </nav>
+        </div>
+      </nav>
+    </aside>
+    <!-- partial -->
+    <!-- partial:partials/_navbar.html -->
+    <header class="mdc-toolbar mdc-elevation--z4 mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          
+          <span class="mdc-toolbar__input">
+            <div class="mdc-text-field">
+             
+            </div>
+          </span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+          
+          <div class="mdc-menu-anchor">
+            <a href="#" class="mdc-toolbar__icon mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
+              <i class="material-icons">widgets</i>
+            </a>
+          </div>
+          <div class="mdc-menu-anchor mr-1">
+            <a href="#" class="mdc-toolbar__icon toggle mdc-ripple-surface" data-toggle="dropdown" toggle-dropdown="logout-menu" data-mdc-auto-init="MDCRipple">
+              <i class="material-icons">more_vert</i>
+            </a>
+            <div class="mdc-simple-menu mdc-simple-menu--right" tabindex="-1" id="logout-menu">
+                <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+                  
+                  <li class="mdc-list-item" role="menuitem" tabindex="0">
+                    <i class="material-icons mdc-theme--primary mr-1">power_settings_new</i>
+                    Logout
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <!-- partial -->
+    
+        <form style="text-align:center;width:500px;margin:auto;margin-top:200px;" method="post";action="/generalInfo">
+          <b> Organization Name:</b> <input type="text" name="OrganizationName" placeholder="organization name" style="width:200px;border:1px solid black;border-radius:5px;padding:10px;"><br><br>
+          <b> Tax Id:</b>             <input type="text" name="taxId" placeholder="Tax Id" style="width:200px;border:1px solid black;border-radius:5px;padding:10px;"><br><br>
+          <b>No. Of Emp:</b><input type="number" name="noemp" placeholder="Number of Emp" style="width:200px;border:1px solid black;border-radius:5px;padding:10px;"><br><br>
+          <b>Reg. No.:</b> <input type="text" name="regno" placeholder="address.." style="width:200px;border:1px solid black;border-radius:5px;padding:10px;"><br><br>
+          <b> Contact:</b><input type="mobile" name="contact" placeholder="contact" style="width:200px;border:1px solid black;border-radius:5px;padding:10px;"><br><br>
+          <b> Address:</b> <input type="text" name="address" placeholder="Address with street number" style="width:200px;border:1px solid black;border-radius:5px;padding:10px;"><br><br>
+            <input type="submit" value="Save" style="width:200px;border:1px solid black;border-radius:5px;padding:10px" id="submitbtn">
+          </form>  
+                    
+  <!-- body wrapper -->
+  <!-- plugins:js -->
+  <script>
+    CKEDITOR.replace( 'editor1' );
+</script>
+  <script src="node_modules/material-components-web/dist/material-components-web.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="node_modules/progressbar.js/dist/progressbar.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/misc.js"></script>
+  <script src="js/material.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <!-- End custom js for this page-->
+  <script>
+    var x=document.querySelector('#adduser');
+    var y=document.querySelector('#admin');
+    var z=document.querySelector("#user");
+    var k=document.querySelector("#organisation");
+    
+    y.addEventListener('click',(e)=>{
+      e.preventDefault();
+      
+      z.style.display="block";
+      k.style.display="block";
+      document.querySelector('#leave').style.display="block";
+    })
+    document.querySelector('#leave').addEventListener('click',()=>{
+      document.querySelector("#leavelist").style.display="block";
+      document.querySelector("#leavecalander").style.display="block";
+    })
+    z.addEventListener('click',(e)=>{
+      e.preventDefault();
+      document.querySelector('#users').style.display="block";
+    })
+    k.addEventListener('click',(e)=>{
+      e.preventDefault();
+      document.querySelector('#structure').style.display="block";
+      document.querySelector('#locations').style.display="block";
+      document.querySelector('#generalinformation').style.display="block";
+    })
+    
+
+  </script>
+</body>
+
+</html>
+</body>
+</html>
